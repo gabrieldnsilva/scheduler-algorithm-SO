@@ -48,8 +48,12 @@ Definir uma estrutura para representar os processos:
 
 ```c
 typedef struct {
-
-}
+    int id;
+    int burst_time;
+    int remaining_time;
+    int waiting_time;
+    int turnaround;
+} Process;
 ```
 
 ### 2. Entrada de Dados
