@@ -61,7 +61,22 @@ typedef struct {
 Permitir que o usuário insira o número de processos, tempos de execução e quantum (para Circular):
 
 ```c
+int n, quantum;
+Process processes[MAX_PROCESSES];
+printf("Digite o número de processos: ");
+scanf("%d", &n);
 
+printf("Digite o quantum para o algoritmo Circular: ");
+scanf("%d", &n);
+
+for (int i = 0; i < n; i++){
+    processes[i].id = i + 1;
+    printf("Digite o tempo de execução do processo P%d: ", i + 1);
+    scanf("%d", &processes[i].burst_time);
+    processes[i].remaining_time = processes[i].burst_time;
+    processes[i].waiting_time = 0;
+    processes[i].turnaround = 0;
+}
 ```
 
 ### 3. Algoritmo Circular (Preemptivo)
