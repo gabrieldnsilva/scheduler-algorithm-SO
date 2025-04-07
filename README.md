@@ -38,8 +38,7 @@ O projeto visa criar uma aplicação em **C** ou **JavaScript** que simule os al
 
 ## 📂 Estrutura do Projeto
 
--   [`requisitos.md`](requisitos.md): Documento detalhado com os requisitos e guia para implementação.
--   [`docs/requisitos-Guia.md`](docs/requisitos-Guia.md): Versão inicial do guia de implementação.
+-   [`docs/requisitos-Guia.md`](docs/requisitos-Guia.md): Documento detalhado com os requisitos e guia para implementação.
 -   `README.md`: Este arquivo, que serve como introdução ao projeto.
 
 ## 🚀 Como Usar
