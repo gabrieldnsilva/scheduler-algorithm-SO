@@ -120,7 +120,29 @@ Implementar o algoritmo SJF:
 Calcular e exibir as métricas:
 
 ```c
+void display_metrics(Process processes[], int n) {
+    float total_waiting_time = 0; total_turnaround = 0;
 
+    printf("\nMétricas dos Processos:\n");
+    printf("+----+----------------+----------------+----------------+\n");
+    printf("| ID | Tempo Espera   | Tempo Retorno  | Tempo Execução |\n");
+    printf("+----+----------------+----------------+----------------+\n");
+
+    for ( int i = 0; i < n; i++>) {
+        printf("| %2d | %14d | %14d | %14d |\n",
+                processes[i].id,
+                processes[i].waiting_time,
+                processes[i].turnaround,
+                processes[i]burst_time);
+
+        total_waiting_time += processes[i].waiting_time;
+        total_turnaround =+ processes[i].turnaround;
+    }
+
+    printf("+----+----------------+----------------+----------------+\n");
+    printf("\nTempo médio de espera: %.2f\n", total_waiting_time / n);
+    printf("Tempo médio de retorno: %.2f\n", total_turnaround_time / n);
+}
 ```
 
 ### 6. Exibição do Diagrama de Gantt
@@ -128,7 +150,13 @@ Calcular e exibir as métricas:
 Mostrar a evolução do algoritmo:
 
 ```c
-
+void draw_gantt_chart(Process processes[], int n) {
+    printf("\nDiagrama de Gantt:\n");
+    for (int i = 0; i < n; i++) {
+        printf("P%d ", processes[i].id);
+    }
+    printf("\n");
+}
 ```
 
 ## Guia para Implementação em JavaScript
