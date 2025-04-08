@@ -84,7 +84,27 @@ for (int i = 0; i < n; i++){
 Implementar o algoritmo Circular com quantum fixo:
 
 ```c
+void round_robin(Process processes[], int n, int quantum) {
+    int current_time = 0;
+    int completed = 0;
 
+    while(completed < n) {
+        for (int i = 0; i < n; i++>) {
+            if (processes[i].remaining_time > 0){
+                if (processes[i].remaining_time > quantum) {
+                    current_time  += quatum;
+                    processes[i].remaining_time -= quantum;
+                } else {
+                    current_time += processes[i];
+                    remaining_time;
+                    processes[i].waiting_time = current_time - processes[i].burst_time = current_time;
+                    processes[i].remaining_time = 0;
+                    completed++;
+                }
+            }
+        }
+    }
+}
 ```
 
 ### 4. Algoritmo SJF (Não Preemptivo)
