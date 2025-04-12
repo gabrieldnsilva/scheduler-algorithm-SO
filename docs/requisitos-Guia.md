@@ -163,6 +163,18 @@ void draw_gantt_chart(Process processes[], int n) {
 
 ### Estrutura de Dados
 
+```javascript
+class Process {
+	constructor(id, burstTime) {
+		this.id = id;
+		this.burstTime = burstTime;
+		this.remainingTime = burstTime;
+		this.waitingTime = 0;
+		this.turnaround = 0;
+	}
+}
+```
+
 ### Algoritmo Circular
 
 ### Algoritmo SJF
