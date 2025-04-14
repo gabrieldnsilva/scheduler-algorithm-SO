@@ -24,17 +24,32 @@ void reset_process_stats(Process processes[], int n)
 
 void input_processes(Process processes[], int *n, int *quantum)
 {
-    printf("Digite o número de processos: ");
-    scanf("%d", n);
-
-    if (*n > MAX_PROCESSES)
+    do
     {
-        printf("Número máximo de processos excedido. Limitando a %d processos. \n", MAX_PROCESSES);
-        *n = MAX_PROCESSES;
-    }
+        printf("Digite o número de processos: ");
+        scanf("%d", n);
 
-    printf("Digite o quantum para o algoritmo Circular: ");
-    scanf("%d", quantum);
+        if (*n <= 0)
+        {
+            printf("O número de processos deve ser maior que zero. Tente novamente.\n");
+        }
+        else if (*n > MAX_PROCESSES)
+        {
+            printf("Número máximo de processos excedido. Limitando a %d processos.\n", MAX_PROCESSES);
+            *n = MAX_PROCESSES;
+        }
+    } while (*n <= 0);
+
+    do
+    {
+        printf("Digite o quantum para o algoritmo Circular: ");
+        scanf("%d", quantum);
+
+        if (*quantum <= 0)
+        {
+            printf("Quantum deve ser maior que zero. Tente novamente.\n");
+        }
+    } while (*quantum <= 0);
 
     for (int i = 0; i < *n; i++)
     {
