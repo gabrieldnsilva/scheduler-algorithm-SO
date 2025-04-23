@@ -24,27 +24,42 @@ void reset_process_stats(Process processes[], int n)
 
 void input_processes(Process processes[], int *n, int *quantum)
 {
-    printf("Digite o número de processos: ");
-    scanf("%d", n);
-
-    if (*n > MAX_PROCESSES)
+    do
     {
-        printf("Número máximo de processos excedido. Limitando a %d processos. \n", MAX_PROCESSES);
-        *n = MAX_PROCESSES;
-    }
+        printf("Digite o numero de processos: ");
+        scanf("%d", n);
 
-    printf("Digite o quantum para o algoritmo Circular: ");
-    scanf("%d", quantum);
+        if (*n <= 0)
+        {
+            printf("O numero de processos deve ser maior que zero. Tente novamente.\n");
+        }
+        else if (*n > MAX_PROCESSES)
+        {
+            printf("Numero máximo de processos excedido. Limitando a %d processos.\n", MAX_PROCESSES);
+            *n = MAX_PROCESSES;
+        }
+    } while (*n <= 0);
+
+    do
+    {
+        printf("Digite o quantum para o algoritmo Circular: ");
+        scanf("%d", quantum);
+
+        if (*quantum <= 0)
+        {
+            printf("Quantum deve ser maior que zero. Tente novamente.\n");
+        }
+    } while (*quantum <= 0);
 
     for (int i = 0; i < *n; i++)
     {
         processes[i].id = i + 1;
-        printf("Digite o tempo de execução do processo P%d: ", i + 1);
+        printf("Digite o tempo de exeexecucaocução do processo P%d: ", i + 1);
         scanf("%d", &processes[i].burst_time);
 
         if (processes[i].burst_time <= 0)
         {
-            printf("Tempo de execução não pode ser <= 0. Definindo como 1.\n");
+            printf("Tempo de execucao não pode ser <= 0. Definindo como 1.\n");
             processes[i].burst_time = 1;
         }
 
@@ -158,9 +173,9 @@ void display_metrics(Process processes[], int n)
 {
     float total_waiting_time = 0, total_turnaround = 0, total_burst_time = 0;
 
-    printf("\nMétricas dos Processos:\n");
+    printf("\nMetricas dos Processos:\n");
     printf("+----+----------------+----------------+----------------+\n");
-    printf("| ID | Tempo Espera   | Tempo Retorno  | Tempo Execução |\n");
+    printf("| ID | Tempo Espera   | Tempo Retorno  | Tempo Execucao |\n");
     printf("+----+----------------+----------------+----------------+\n");
 
     for (int i = 0; i < n; i++)
@@ -177,8 +192,8 @@ void display_metrics(Process processes[], int n)
     }
 
     printf("+----+----------------+----------------+----------------+\n");
-    printf("\nTempo médio de espera: %.2f\n", total_waiting_time / n);
-    printf("Tempo médio de retorno: %.2f\n", total_turnaround / n);
+    printf("\nTempo medio de espera: %.2f\n", total_waiting_time / n);
+    printf("Tempo medio de retorno: %.2f\n", total_turnaround / n);
     printf("Tempo total de uso do processador: %.2f\n", total_burst_time);
 }
 

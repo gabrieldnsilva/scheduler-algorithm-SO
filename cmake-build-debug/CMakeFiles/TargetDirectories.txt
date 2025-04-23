@@ -1,0 +1,3 @@
+C:/Users/Kaique/Downloads/scheduler-algorithm-SO/cmake-build-debug/CMakeFiles/scheduler.dir
+C:/Users/Kaique/Downloads/scheduler-algorithm-SO/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kaique/Downloads/scheduler-algorithm-SO/cmake-build-debug/CMakeFiles/rebuild_cache.dir

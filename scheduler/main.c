@@ -19,7 +19,7 @@ int main()
         printf("2. SJF (Shortest Job First) Não-Preemptivo\n");
         printf("3. Executar ambos e comparar\n");
         printf("0. Sair\n");
-        printf("Opção: ");
+        printf("Opcao: ");
         scanf("%d", &choice);
 
         switch (choice)
@@ -32,7 +32,7 @@ int main()
             break;
 
         case 2:
-            printf("\n=== Executando Algoritmo SJF Não-Preemptivo ===\n");
+            printf("\n=== Executando Algoritmo SJF Nao-Preemptivo ===\n");
             sjf_non_preemptive(processes, n, history, &history_size);
             draw_gantt_chart(history, history_size);
             display_metrics(processes, n);
@@ -47,18 +47,18 @@ int main()
             // Resetar estatísticas dos processos para o próximo algoritmo
             reset_process_stats(processes, n);
 
-            printf("\n=== Executando Algoritmo SJF Não-Preemptivo ===\n");
+            printf("\n=== Executando Algoritmo SJF Nao-Preemptivo ===\n");
             sjf_non_preemptive(processes, n, history, &history_size);
             draw_gantt_chart(history, history_size);
             display_metrics(processes, n);
             break;
 
         case 0:
-            printf("Saindo do programa. Obrigado!\n");
+            printf("Saindo do programa...\n");
             break;
 
         default:
-            printf("Opção inválida. Tente novamente.\n");
+            printf("Opcao invalida. Tente novamente.\n");
         }
     } while (choice != 0);
 
