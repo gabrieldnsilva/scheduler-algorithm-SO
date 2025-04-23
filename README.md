@@ -62,10 +62,6 @@ O projeto visa criar uma aplicação em **C** ou **JavaScript** que simule os al
         gcc -o scheduler scheduler.c
         ./scheduler
         ```
-    - **JavaScript**:
-        ```bash
-        node scheduler.js
-        ```
 
 4. Insira os dados solicitados e visualize os resultados, incluindo métricas e o diagrama de Gantt.
 
@@ -78,7 +74,7 @@ Para detalhes técnicos e exemplos de código, consulte os seguintes arquivos:
 
 ## 🧑‍💻 Tecnologias Utilizadas
 
--   Linguagens: **C** e **JavaScript**
+-   Linguagens: **C**
 -   Estruturas de Dados: Vetores, structs e/ou matrizes
 -   Ferramentas: Markdown para documentação compatível com GitHub
 
@@ -111,5 +107,9 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ---
 
-**Autor:** Gabriel D. N. Silva  
+**Autores:** 
+Gabriel D. N. Silva
+Kaique Carvalho
+Rogério
+
 **Licença:** MIT
